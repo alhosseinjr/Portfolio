@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found | Al-Hossein</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --glass-bg: rgba(30, 41, 59, 0.7);
+      --glass-border: rgba(255, 255, 255, 0.1);
+      --text: #f8fafc;
+      --accent: #3b82f6;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+    /* Gradient Blobs bg */
+    .blob {
+      position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.6; z-index: -1;
+    }
+    .b1 { width: 400px; height: 400px; background: rgba(59, 130, 246, 0.3); top: -100px; left: -100px; animation: float 10s infinite ease-in-out alternate; }
+    .b2 { width: 500px; height: 500px; background: rgba(99, 102, 241, 0.2); bottom: -150px; right: -100px; animation: float 12s infinite ease-in-out alternate-reverse; }
+    
+    @keyframes float { 0% { transform: translate(0, 0); } 100% { transform: translate(50px, 50px); } }
+
+    .error-container {
+      background: var(--glass-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--glass-border);
+      border-radius: 24px;
+      padding: 3rem 4rem;
+      text-align: center;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      animation: popup 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes popup { 0% { opacity: 0; transform: translateY(40px) scale(0.95); } 100% { opacity: 1; transform: translateY(0) scale(1); } }
+
+    h1 {
+      font-size: 8rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #60a5fa, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.5rem;
+      line-height: 1;
+    }
+    h2 { font-size: 2rem; font-weight: 600; margin-bottom: 1rem; color: #cbd5e1; }
+    p { font-size: 1.1rem; color: #94a3b8; margin-bottom: 2.5rem; max-width: 400px; line-height: 1.6; }
+    
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 2rem;
+      border-radius: 99px;
+      background: linear-gradient(135deg, #3b82f6, #6366f1);
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 20px -10px rgba(59, 130, 246, 0.5);
+    }
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 25px -10px rgba(59, 130, 246, 0.7);
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+
+  <div class="error-container">
+    <h1>404</h1>
+    <h2>System Override</h2>
+    <p>The page you are looking for seems to have been lost in the neural network or moved to a different repository.</p>
+    <a href="/" class="btn">Return to Base</a>
+  </div>
+</body>
+</html>
